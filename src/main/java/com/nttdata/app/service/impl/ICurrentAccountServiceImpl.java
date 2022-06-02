@@ -1,6 +1,7 @@
 package com.nttdata.app.service.impl;
 
 import com.nttdata.app.document.CurrentAccount;
+import com.nttdata.app.document.SavingsAccount;
 import com.nttdata.app.repository.ICurrentAccountRepository;
 import com.nttdata.app.service.ICurrentAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,4 +41,11 @@ public class ICurrentAccountServiceImpl implements ICurrentAccountService {
     {
         return currentAccountRepository.delete(account);
     }
+
+
+    public  Flux<CurrentAccount> getCurrentAccountByIdCustomer(String idCustomer)
+    {
+        return currentAccountRepository.findAllByIdCustomer(idCustomer);
+    }
+
 }

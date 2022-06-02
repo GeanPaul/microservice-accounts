@@ -1,5 +1,6 @@
 package com.nttdata.app.controller;
 import com.nttdata.app.document.CurrentAccount;
+import com.nttdata.app.document.SavingsAccount;
 import com.nttdata.app.service.impl.ICurrentAccountServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,6 +61,13 @@ public class CurrentAccountController {
             return currentAccountServiceImpl.deleteCurrentAccount(ac);
         });
 
+
+    }
+
+    @GetMapping("/customer/{idCustomer}")
+    public Flux<CurrentAccount> getAllCurrentAccountsPersonalByIdCustomer(@PathVariable String idCustomer)
+    {
+        return  currentAccountServiceImpl.getCurrentAccountByIdCustomer(idCustomer);
 
     }
 

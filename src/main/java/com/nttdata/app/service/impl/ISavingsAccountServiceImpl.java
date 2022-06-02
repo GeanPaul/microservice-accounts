@@ -5,6 +5,7 @@ import com.nttdata.app.repository.ISavingsAccountRepository;
 import com.nttdata.app.service.ISavingsAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -36,8 +37,13 @@ public class ISavingsAccountServiceImpl implements ISavingsAccountService {
     }
 
     @Override
-    public Mono<Void> deleteSavingsAccount(SavingsAccount account)
-    {
+    public Mono<Void> deleteSavingsAccount(SavingsAccount account) {
         return savingsAccountRepository.delete(account);
+
+    }
+
+    public  Mono<SavingsAccount> getSavingsAccountByIdCustomer(String idCustomer)
+    {
+        return savingsAccountRepository.findByIdCustomer(idCustomer);
     }
 }

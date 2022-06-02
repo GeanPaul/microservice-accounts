@@ -1,5 +1,6 @@
 package com.nttdata.app.controller;
 
+import com.nttdata.app.document.CurrentAccount;
 import com.nttdata.app.document.FixedTermAccount;
 import com.nttdata.app.document.SavingsAccount;
 import com.nttdata.app.service.impl.IFixedTermAccountServiceImpl;
@@ -65,6 +66,13 @@ public class FixedTermAccountController {
             return FixedTermAccountServiceImpl.deleteFixedTermAccount(ac);
         });
 
+
+    }
+
+    @GetMapping("/customer/{idCustomer}")
+    public Flux<FixedTermAccount> getAllFixedTermAccountsPersonalByIdCustomer(@PathVariable String idCustomer)
+    {
+        return  FixedTermAccountServiceImpl.getFixedTermAccountByIdCustomer(idCustomer);
 
     }
 

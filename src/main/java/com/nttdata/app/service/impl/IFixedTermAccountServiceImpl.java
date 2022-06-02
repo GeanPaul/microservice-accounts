@@ -1,6 +1,7 @@
 package com.nttdata.app.service.impl;
 
 import com.nttdata.app.document.FixedTermAccount;
+import com.nttdata.app.document.SavingsAccount;
 import com.nttdata.app.repository.IFixedTermAccountRepository;
 import com.nttdata.app.service.IFixedTermAccountService;
 import com.nttdata.app.service.ISavingsAccountService;
@@ -41,4 +42,13 @@ public class IFixedTermAccountServiceImpl implements IFixedTermAccountService {
     {
         return fixedTermAccountRepository.delete(account);
     }
+
+
+    public  Flux<FixedTermAccount> getFixedTermAccountByIdCustomer(String idCustomer)
+    {
+        return fixedTermAccountRepository.findAllByIdCustomer(idCustomer);
+    }
+
+
+
 }

@@ -65,5 +65,12 @@ public class SavingsAccountController {
 
     }
 
+    @GetMapping("/personalcustomer/{idCustomer}")
+    public Mono<SavingsAccount> getAllSavingsAccountByIdCustomer(@PathVariable String idCustomer)
+    {
+        return  savingsAccountServiceImpl.getSavingsAccountByIdCustomer(idCustomer);
+
+    }
+
 
 }
