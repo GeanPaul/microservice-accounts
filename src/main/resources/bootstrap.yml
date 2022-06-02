@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: microservice-accounts-dev
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8084
+
+
+#server.port=8081
+#spring.data.mongodb.uri=mongodb+srv://useraccount:passaccount@clusterconexion.j8gyv.mongodb.net/?retryWrites=true&w=majority
+#spring.data.mongodb.database=accountsBD
+#spring.application.name=microservice-accounts

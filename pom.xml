@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.nttdata</groupId>
-    <artifactId>microservice-accounts2</artifactId>
+    <artifactId>microservice-accounts</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>microservice-accounts2</name>
-    <description>microservice-accounts2</description>
+    <name>microservice-accounts</name>
+    <description>microservice-accounts</description>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -36,6 +36,16 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-client</artifactId>
+            <version>3.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+            <version>3.1.1</version>
         </dependency>
 
 
