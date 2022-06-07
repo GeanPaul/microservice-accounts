@@ -1,6 +1,6 @@
 spring:
   application:
-    name: microservice-accounts-dev
+    name: microservice-accounts
   cloud:
     config:
       enabled: true
